@@ -1,11 +1,11 @@
 import { html } from '../../lib/lib.js';
 
-export const editorQuestionTemplate = (onCancel) => html`
+export const editorAddQuestionTemplate = (onSave, onCancel) => html`
     <article class="editor-question">
         <div class="layout">
             <div class="question-control">
-                <button class="input submit action"><i class="fas fa-check-double"></i> Save</button>
-                <button class="input submit action"><i class="fas fa-times" @click=${onCancel}></i> Cancel</button>
+                <button class="input submit action" @click=${onSave}><i class="fas fa-check-double"></i> Save</button>
+                <button class="input submit action" @click=${onCancel}><i class="fas fa-times"></i> Cancel</button>
             </div>
             <h3>Question 1</h3>
         </div>
